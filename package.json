@@ -1,11 +1,18 @@
 {
   "name": "@vuenice/pagination",
   "version": "0.1.1",
-  "main": "src/index.js",
-  "module": "src/index.js",
   "type": "module",
-  "homepage": "https://github.com/vuenice/vue-nice-pagination",
+  "main": "src/index.js",
+  "exports": {
+    ".": {
+      "import": "./src/index.js"
+    }
+  },
+  "files": [
+    "src"
+  ],
   "description": "Vue 3 pagination component for navigating large datasets.",
+  "homepage": "https://github.com/vuenice/vue-nice-pagination",
   "keywords": [
     "vue-nice-pagination",
     "vue3-pagination",
@@ -13,15 +20,22 @@
   ],
   "author": "Yogesh Galav <mr.yogesh.galav@gmail.com> (https://github.com/yogeshgalav/)",
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vuenice/vue-nice-pagination"
+  },
+  "bugs": {
+    "url": "https://github.com/vuenice/vue-nice-pagination/issues"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "test:run": "vitest run"
+    "test:run": "vitest run",
+    "coverage": "vitest run --coverage"
   },
-  "dependencies": {
-    "vue": "^3.4.0"
+  "peerDependencies": {
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.0",
@@ -30,11 +44,5 @@
     "@vue/test-utils": "^2.4.0",
     "jsdom": "^24.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vuenice/vue-nice-pagination"
-  },
-  "bugs": {
-    "url": "https://github.com/vuenice/vue-nice-pagination/issues"
-  }
+  "module": "src/index.js"
 }
